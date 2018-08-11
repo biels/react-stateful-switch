@@ -1,6 +1,6 @@
 {
   "name": "react-stateful-switch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react stateful switch component",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,7 +9,6 @@
     "test": "jest --config jestconfig.json",
     "prepublish": "npm run test && npm run build",
     "prepublishOnly": "npm test",
-    "version": "git add -A src",
     "postversion": "git push && git push --tags"
   },
   "repository": {
