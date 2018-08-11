@@ -16,13 +16,13 @@ describe('Switch', () => {
         const component = shallow(
             <Switch views={[<C1/>, <C2/>]}/>
         )
-        expect(component.html()).toEqual('<div style="display:hidden"><div>C1</div></div><div style="display:hidden"><div>C2</div></div>')
+        expect(component.html()).toEqual('<div style="display:none"><div>C1</div></div><div style="display:none"><div>C2</div></div>')
     })
     it('shows first when first is selected without array', () => {
         const component = shallow(
             <Switch views={[<C1/>, <C2/>]} selected={0}/>
         )
-        expect(component.html()).toEqual('<div style="display:content"><div>C1</div></div><div style="display:hidden"><div>C2</div></div>')
+        expect(component.html()).toEqual('<div style="display:content"><div>C1</div></div><div style="display:none"><div>C2</div></div>')
     })
     it('shows multiple when multiple are selected', () => {
         const component = shallow(
@@ -43,7 +43,7 @@ describe('Switch', () => {
                 <C2/>
             </Switch>
         )
-        expect(component.html()).toEqual('<div style="display:hidden"><div>C1</div></div><div style="display:content"><div>C2</div></div>')
+        expect(component.html()).toEqual('<div style="display:none"><div>C1</div></div><div style="display:content"><div>C2</div></div>')
     })
 
 })
