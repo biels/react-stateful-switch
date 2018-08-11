@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "lib",
-    "sourceRoot": "src",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es2017",
     "lib": [
       "es6",
@@ -32,6 +31,9 @@
     "skipDefaultLibCheck": true,
     "experimentalDecorators": true
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
     "build",
