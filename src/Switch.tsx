@@ -36,7 +36,7 @@ class Switch extends PureComponent<SwitchProps> {
         let views = this.getViews();
         let renderedViews = views.map((view, index) => {
             const selected = _.some(this.getSelectedIndexes(), (selectedIndex) => index === selectedIndex)
-            const display = selected ? 'content' : 'none';
+            const display = selected ? 'contents' : 'none';
             const View: any = view;
             const specificProps = this.props.props
             return <div key={index} style={{display}}>
