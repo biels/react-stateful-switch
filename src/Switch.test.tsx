@@ -43,7 +43,7 @@ describe('Switch', () => {
                 <C2/>
             </Switch>
         )
-        expect(component.html()).toEqual('<div style="display:none"><div>C1</div></div><div style="display:content"><div>C2</div></div>')
+        expect(component.html()).toEqual('<div style="display:none"><div>C1</div></div><div style="display:contents"><div>C2</div></div>')
     })
 
 })
