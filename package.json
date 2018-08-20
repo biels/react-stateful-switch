@@ -9,7 +9,10 @@
     "test": "jest --config jestconfig.json",
     "prepublish": "npm run test && npm run build",
     "prepublishOnly": "npm test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",

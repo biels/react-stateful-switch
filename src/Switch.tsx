@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import {ComponentType, PureComponent, ReactNode} from 'react';
-import * as _ from "lodash";
+import _ from "lodash";
 
 export type View = ReactNode | Function
 
