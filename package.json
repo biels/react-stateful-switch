@@ -1,6 +1,6 @@
 {
   "name": "react-stateful-switch",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A react stateful switch component",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
