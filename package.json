@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest --config jestconfig.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "prepublish": "npm run test && npm run build",
     "prepublishOnly": "npm test",
     "postversion": "git push && git push --tags",
@@ -50,5 +51,30 @@
     "lodash": "^4.17.10",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "rootDir": "src",
+    "snapshotSerializers": [
+      "enzyme-to-json"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>setupTests.ts",
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true,
+        "enableTsDiagnostics": false
+      }
+    }
   }
 }
