@@ -54,7 +54,7 @@ class Switch extends PureComponent<SwitchProps> {
             _.range(views.length);
         if(this.props.maxHidden === 0) cachedIndexes = []
         // const renderedIndexes = _.uniq(_.flatten(cachedIndexes.concat(selectedIndexes)))
-        console.log(`$(Sel: ${selectedIndexes} / Cached: ${cachedIndexes}), Hist: ${this.displayHistory}`);
+        // console.log(`$(Sel: ${selectedIndexes} / Cached: ${cachedIndexes}), Hist: ${this.displayHistory}`);
         let renderedViews = _.range(views.length).map((index) => {
             const view = views[index]
             let selectedIndexes = this.getSelectedIndexes();
