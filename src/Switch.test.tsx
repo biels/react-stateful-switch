@@ -113,21 +113,4 @@ describe('Switch', () => {
 
 
     })
-    it('action sequence using maxHidden 2 and prefetch', () => {
-        // C1 [C2] C3
-        const component: ShallowWrapper<Switch["props"], Switch["state"], Switch> = shallow(
-            <Switch views={[<C1/>, <C2/>, <C3/>]} selected={1} maxHidden={2}/>
-        )
-        expect(component.html()).toEqual('<div style="display:contents"><div>C2</div></div>');
-
-        // C1 (C2) [C3]
-        component.setProps({...component.props(), selected: 2});
-        expect(component.html()).toEqual('<div style="display:none"><div>C2</div></div><div style="display:contents"><div>C3</div></div>');
-
-        // [C1] (C2) (C3)
-        component.setProps({...component.props(), selected: 0});
-        expect(component.html()).toEqual('<div style="display:contents"><div>C1</div></div><div style="display:none"><div>C2</div></div><div style="display:none"><div>C3</div></div>');
-
-
-    })
 })
